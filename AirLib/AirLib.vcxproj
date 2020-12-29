@@ -98,6 +98,7 @@
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\AngleLevelController.hpp" />
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\AngleRateController.hpp" />
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\CascadeController.hpp" />
+    <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\LQRController.hpp" />
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\ConstantOutputController.hpp" />
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\interfaces\IPidIntegrator.hpp" />
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\OffboardApi.hpp" />

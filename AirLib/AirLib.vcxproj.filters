@@ -279,6 +279,9 @@
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\CascadeController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\LQRController.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\vehicles\multirotor\firmwares\simple_flight\firmware\ConstantOutputController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

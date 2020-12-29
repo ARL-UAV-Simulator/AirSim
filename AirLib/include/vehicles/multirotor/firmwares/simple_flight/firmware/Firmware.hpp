@@ -10,6 +10,7 @@
 #include "RemoteControl.hpp"
 #include "OffboardApi.hpp"
 #include "Mixer.hpp"
+#include "LQRController.hpp"
 #include "CascadeController.hpp"
 #include "AdaptiveController.hpp"
 
@@ -29,6 +30,9 @@ public:
         case Params::ControllerType::Adaptive:
             controller_ = std::unique_ptr<AdaptiveController>(new AdaptiveController());
             break;
+        case Params::ControllerType::LQR:
+            controller_ = std::unique_ptr<LQRController>(new LQRController(params, board, comm_link));
+            break; 
         default:
             throw std::invalid_argument("Cannot recognize controller specified by params->controller_type");
         }

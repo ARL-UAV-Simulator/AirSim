@@ -850,6 +850,9 @@ class MultirotorClient(VehicleClient, object):
     def __init__(self, ip = "", port = 41451, timeout_value = 3600):
         super(MultirotorClient, self).__init__(ip, port, timeout_value)
 
+    def test(self, timeout_sec = 20, vehicle_name = ''):
+        return self.client.call_async('test', timeout_sec, vehicle_name)
+
     def takeoffAsync(self, timeout_sec = 20, vehicle_name = ''):
         """
         Takeoff vehicle to 3m above ground. Vehicle should not be moving when this API is used

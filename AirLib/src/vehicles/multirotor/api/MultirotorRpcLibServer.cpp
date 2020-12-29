@@ -42,6 +42,12 @@ MultirotorRpcLibServer::MultirotorRpcLibServer(ApiProvider* api_provider, string
         : RpcLibServerBase(api_provider, server_address, port)
 {
     (static_cast<rpc::server*>(getServer()))->
+        bind("test", [&](float timeout_sec, const std::string& vehicle_name) -> bool { 
+        timeout_sec;
+        return getVehicleApi(vehicle_name)->test(); 
+    });
+
+    (static_cast<rpc::server*>(getServer()))->
         bind("takeoff", [&](float timeout_sec, const std::string& vehicle_name) -> bool { 
         return getVehicleApi(vehicle_name)->takeoff(timeout_sec); 
     });

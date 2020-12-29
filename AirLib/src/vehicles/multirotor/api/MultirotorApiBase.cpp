@@ -72,6 +72,11 @@ bool MultirotorApiBase::goHome(float timeout_sec)
     return moveToPosition(0, 0, 0, 0.5f, timeout_sec, DrivetrainType::MaxDegreeOfFreedom, YawMode::Zero(), -1, 1);
 }
 
+bool MultirotorApiBase::test()
+{
+    return true;
+}
+
 bool MultirotorApiBase::moveByVelocityBodyFrame(float vx, float vy, float vz, float duration, DrivetrainType drivetrain, const YawMode& yaw_mode)
 {
     SingleTaskCall lock(this);
