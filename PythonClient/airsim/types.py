@@ -357,6 +357,14 @@ class KinematicsState(MsgpackMixin):
     linear_acceleration = Vector3r()
     angular_acceleration = Vector3r()
 
+    def __init__(self):
+        self.position = Vector3r()
+        self.orientation = Quaternionr()
+        self.linear_velocity = Vector3r()
+        self.angular_velocity = Vector3r()
+        self.linear_acceleration = Vector3r()
+        self.angular_acceleration = Vector3r()      
+
 class EnvironmentState(MsgpackMixin):
     position = Vector3r()
     geo_point = GeoPoint()
@@ -385,6 +393,17 @@ class MultirotorState(MsgpackMixin):
     ready = False
     ready_message = ""
     can_arm = False
+
+    def __init__(self):
+        self.collision = CollisionInfo()
+        self.kinematics_estimated = KinematicsState()
+        self.gps_location = GeoPoint()
+        self.timestamp = np.uint64(0)
+        self.landed_state = LandedState.Landed
+        self.rc_data = RCData()
+        self.ready = False
+        self.ready_message = ""
+        self.can_arm = False
 
 class RotorStates(MsgpackMixin):
     timestamp = np.uint64(0)
